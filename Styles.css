@@ -146,9 +146,9 @@ body {
   
   .project-list {
     display: flex;
-    flex-wrap: wrap;          /* allow items to wrap on narrow screens */
+    flex-wrap: nowrap;          /* allow items to wrap on narrow screens */
     gap: 20px;                /* space between cards */
-    justify-content: center;  /* center the row */
+    justify-content: space-between;  /* center the row */
   }
   
   .project-list > div {
@@ -156,10 +156,11 @@ body {
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 2px 8px rgb(182, 77, 77);
-    flex: 1 1 280px;          /* grow/shrink, base width 280px */
-    max-width: 320px;         /* prevent cards from getting too wide */
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
   }
   
   /* optional hover effect */
