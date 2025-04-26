@@ -1,10 +1,19 @@
 /* reset margins/padding, no flex on body */
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 51px;
-    padding: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  max-width: 1000px;      /* caps the grey “page” width */
+  margin: 51px auto;      /* 51px top/bottom, auto left/right centers it */
+  padding: 0 16px;        /* optional inner padding */
+}
+  .wrapper {
+    max-width: 800px;      /* pick the width you like */
+    margin: 51px auto;     /* center with top/bottom spacing */
+    padding: 0 16px;       /* breathing room at the sides */
+    background: white;     /* if you want a white “page” inside the grey background */
+    border-radius: 8px;    /* optional rounded corners */
   }
   
   /* center hero content but allow page to scroll */
@@ -57,4 +66,109 @@ body {
 }
   
   /* remove any leftover .text if unused */
+  
+  .logo-slider {
+    overflow: hidden;           /* hide overflow */
+    width: 100%;
+    max-width: 1000px;          /* optional cap */
+    margin: 50px auto;          /* center & vertical spacing */
+    background: #f0f0f0;
+    border-radius: 9999px;
+    padding: 12px 0;            /* vertical padding */
+    box-sizing: border-box;
+    perspective: 500px;         /* if you want 3D effects */
+  }
+
+  /* The moving track */
+  .logo-track {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+  }
+
+  /* Your icons */
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-origin: center center;
+    /* optional rocking effect */
+    /* animation: rock 3s ease-in-out infinite alternate; */
+  }
+
+  .tech-icon:hover {
+    /* grow 20% */
+    transform: scale(1.2);
+    /* shift colors & brighten */
+    filter: hue-rotate(90deg) brightness(1.2);
+  }
+  /* Slide the track left by 50% (one full icon-set) */
+  @keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Optional: a gentle rock */
+  @keyframes rock {
+    from { transform: rotateY(-15deg); }
+    to   { transform: rotateY( 15deg); }
+  }
+
+  /* Pause on hover */
+  .logo-slider:hover .logo-track {
+    animation-play-state: paused;
+  }
+
+
+  .projects {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 16px;
+  }
+  
+  .projects-title {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 2rem;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;          /* allow items to wrap on narrow screens */
+    gap: 20px;                /* space between cards */
+    justify-content: center;  /* center the row */
+  }
+  
+  .project-list > div {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1 1 280px;          /* grow/shrink, base width 280px */
+    max-width: 320px;         /* prevent cards from getting too wide */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* optional hover effect */
+  .project-list > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+  
+  .project-list h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+  
+  .project-list p {
+    margin-bottom: 0;
+    color: #555;
+  }
+  
+
+  
+  
   
