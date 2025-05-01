@@ -1,7 +1,7 @@
 /* reset margins/padding, no flex on body */
 body {
   background-color: #b1bbdd3f;
-  background-image: url('3d-rendering-hexagonal-texture-background.jpg');
+  background-image: url('/image/3d-rendering-hexagonal-texture-background.jpg');
   font-family: Arial, sans-serif;
   color: #1f1b1b;
 
@@ -45,7 +45,7 @@ body {
   /* name and title spaced by margins */
   .my-name {
     margin-top: 1.5rem;
-    color: #000000;
+    color: #ffffff;
     
     font-size: 2rem; /* 32px */
     text-align: center;
@@ -62,16 +62,16 @@ body {
   #about {
     color: #f7f7f7;
     font-size: 1.25rem; /* 21px */
-    text-align: center;
+    text-align:left;
     width: 90%;
     max-width: 800px;
     margin: 4rem auto;   /* space above/below and center horizontally */
     padding: 2rem;
     background: #3f3b3b7a;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius:8px;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
-}
+  }
   
   /* remove any leftover .text if unused */
   
@@ -144,14 +144,14 @@ body {
     font-size: 2rem;
   }
   
-  .project-list {
+  .projectlist {
     display: flex;
     flex-wrap: nowrap;          /* allow items to wrap on narrow screens */
     gap: 20px;                /* space between cards */
     justify-content: space-between;  /* center the row */
   }
   
-  .project-list > div {
+  .projectlist > div {
     background: #fff;
     border-radius: 8px;
     padding: 16px;
@@ -164,20 +164,59 @@ body {
   }
   
   /* optional hover effect */
-  .project-list > div:hover {
+  .projectlist > div:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgb(20, 20, 20);
   }
   
-  .project-list h3 {
+  .projectlist h3 {
     margin-top: 0;
     font-size: 1.25rem;
   }
   
-  .project-list p {
+  .projectlist p {
     margin-bottom: 0;
     color: #0a0a0a;
   }
+  
+  .view-more {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: Times, serif;
+    color: inherit;   
+    line-height: 16px; 
+    padding: 12px; 
+    border-radius: 24px; 
+    
+    font-weight: normal; 
+    text-decoration: none;  /* strips the underline */
+          /* keeps the same color as surrounding text */
+           /* adjust as needed */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(206, 206, 206) 0%, rgb(191, 203, 211) 50%, rgb(191, 195, 198) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0); 
+    display: inline-block;
+    object-fit: contain;
+    transform: scale(1.2) translate(250px, 0px);
+    
+  
+    
+  }
+  
+  .view-more:hover {
+    
+    filter: hue-rotate(90deg) brightness(1.2);
+    
+  
+  }
+  /* footer */
   
 
   
