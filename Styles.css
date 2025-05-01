@@ -182,8 +182,8 @@ body {
   .view-more {
     text-align: center;
     margin-top: 20px;
-    font-size: large;
-    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-family: Times, serif;
     color: inherit;   
     line-height: 16px; 
     padding: 12px; 
@@ -192,9 +192,9 @@ body {
     font-weight: normal; 
     text-decoration: none;  /* strips the underline */
           /* keeps the same color as surrounding text */
-    font-size: 1rem;         /* adjust as needed */
+           /* adjust as needed */
     
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
    
     font-variant: normal; 
     text-transform: none; 
@@ -204,17 +204,18 @@ body {
     border: 2px solid rgb(0, 0, 0); 
     display: inline-block;
     object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    transform-origin: center center;
     transform: scale(1.2) translate(250px, 0px);
+    
+  
     
   }
   
   .view-more:hover {
-    transform: scale(1.2) translate(250px, 0px);
+    
     filter: hue-rotate(90deg) brightness(1.2);
+    
+  
   }
-
   /* footer */
   
 
