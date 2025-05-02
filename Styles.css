@@ -1,16 +1,23 @@
+@font-face {
+  font-family: 'TarrgetChromeItalic';
+  src: url('/Font/XerodaRegular-p7dwr.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* reset margins/padding, no flex on body */
 body {
   background-color: #b1bbdd3f;
   background-image: url('/image/3d-rendering-hexagonal-texture-background.jpg');
-  font-family: Arial, sans-serif;
   color: #1f1b1b;
-
+  font-family: 'TarrgetChromeItalic', sans-serif;
+  overflow: auto;
   /* let it grow to fill smaller viewports but cap at 900px */
   width: 100%;
   max-width: 900px;
 
   /* 51px top/bottom, auto left/right to center */
-  margin: 51px auto;
+  margin: 92px auto;
 
   /* breathing room on the sides */
   padding: 0 16px;
@@ -24,12 +31,6 @@ body {
   }
   
   /* center hero content but allow page to scroll */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4rem 1rem;  /* spacing from top and sides */
-  }
   
   /* image styling */
   .my-image img {
@@ -40,8 +41,64 @@ body {
     border-radius: 50%; /* optional circle */
     display: block;
     margin: auto;
+    
+  }
+  .hero {
+    display: flex;
+    align-items: center;  /* vertical align */
+    justify-content: center; /* center them horizontally in wrapper */
+    gap: 2rem;            /* space between image and tabs */
+    margin: 2rem auto;    /* space above/below */
+    max-width: 900px;     /* or whatever your wrapper width is */
   }
   
+  /* profile pic sizing */
+  .profile-area .my-image {
+    width: 150px;         /* adjust as needed */
+    height: auto;
+    border-radius: 50%;
+    opacity: .9;
+    transform: translate(-35px, 0px);
+    
+  }
+  
+  .topTabs {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .topTab{
+    text-decoration: none;
+    color: #fff;          /* or your desired color */
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    transition: background .3s;
+    transform: translate(119px, -174px);
+  }
+
+  .topTab:hover {
+    background: rgba(255,255,255, .2);
+  }
+  /* tabs styling */
+  .tabs {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .tab {
+    text-decoration: none;
+    color: #fff;          /* or your desired color */
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    transition: background .3s;
+    transform: translate(-2px, 0px);
+  }
+  
+  .tab:hover {
+    background: rgba(255,255,255, .2);
+  }
   /* name and title spaced by margins */
   .my-name {
     margin-top: 1.5rem;
@@ -49,6 +106,7 @@ body {
     
     font-size: 2rem; /* 32px */
     text-align: center;
+    transform: translate(-45px, 0px);
   }
   
   .my-title {
@@ -56,8 +114,123 @@ body {
     color: #ffffff;
     font-size: 1.5rem; /* 25px */
     text-align: center;
+    transform: translate(-44px, 0px);
   }
   
+  .footer-content{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;          /* allow items to wrap on narrow screens */
+    max-width: 1000px;
+    margin: -1px auto;
+    padding: 20px 16px;
+    justify-content: space-between; /* center the row */
+    translate: -291px 0px;
+  }
+  
+  .email {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+    
+    color: inherit;   
+    line-height: 16px; 
+    padding: 12px; 
+    border-radius: 24px; 
+    
+    font-weight: normal; 
+    text-decoration: none;  /* strips the underline */
+          /* keeps the same color as surrounding text */
+           /* adjust as needed */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(206, 206, 206) 0%, rgb(191, 203, 211) 50%, rgb(191, 195, 198) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0); 
+    display: inline-block;
+    object-fit: contain;
+    transform: scale(1.2) translate(250px, 0px);
+  }
+
+  .github {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+    
+    color: inherit;   
+    line-height: 16px; 
+    padding: 12px; 
+    border-radius: 24px; 
+    
+    font-weight: normal; 
+    text-decoration: none;  /* strips the underline */
+          /* keeps the same color as surrounding text */
+           /* adjust as needed */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(206, 206, 206) 0%, rgb(191, 203, 211) 50%, rgb(191, 195, 198) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0); 
+    display: inline-block;
+    object-fit: contain;
+    transform: scale(1.2) translate(250px, 0px);
+  }
+
+  .linkedin {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+    
+    color: inherit;   
+    line-height: 16px; 
+    padding: 12px; 
+    border-radius: 24px; 
+    
+    font-weight: normal; 
+    text-decoration: none;  /* strips the underline */
+          /* keeps the same color as surrounding text */
+           /* adjust as needed */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(206, 206, 206) 0%, rgb(191, 203, 211) 50%, rgb(191, 195, 198) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0); 
+    display: inline-block;
+    object-fit: contain;
+    transform: scale(1.2) translate(250px, 0px);
+  }
+
+  .linkedin:hover {
+    
+    filter: hue-rotate(90deg) brightness(1.2);
+    
+  
+  }
+  .github:hover {
+    
+    filter: hue-rotate(90deg) brightness(1.2);
+    
+  
+  }
+  .email:hover {
+    
+    filter: hue-rotate(90deg) brightness(1.2);
+    
+  
+  }
   /* about section */
   #about {
     color: #f7f7f7;
@@ -183,7 +356,7 @@ body {
     text-align: center;
     margin-top: 20px;
     font-size: 1rem;
-    font-family: Times, serif;
+   
     color: inherit;   
     line-height: 16px; 
     padding: 12px; 
@@ -216,8 +389,31 @@ body {
     
   
   }
-  /* footer */
+  .section-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
   
+  /* Resume iframe container */
+  #resume iframe {
+    display: block;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+    height: 1000px; /* adjust as needed */
+  }
+  
+  /* Fallback link styling */
+  #resume p a {
+    color: #00aced;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  #resume p a:hover {
+    text-decoration: underline;
+  }
 
   
   
